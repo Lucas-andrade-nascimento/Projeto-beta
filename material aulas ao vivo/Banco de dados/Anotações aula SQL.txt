@@ -1,0 +1,58 @@
+SQL - linguagem de consulta estruturada (structure query language)
+SGBD - sistema de gerenciamento de banco de dados 
+
+para treinar o site é: phpmyadmin
+
+-- criei um database
+create database andrade;
+
+-- deixei o database aberto para uso 
+use andrade;
+
+-- criar uma tabela de clientes dentro do nosso DB 
+
+CREATE TABLE andrade.clientes(
+    id_clientes int not null AUTO_INCREMENT PRIMARY KEY,
+    nome_cliente varchar(50) not null,
+    idade_cliente int not null,
+    email_cliente varchar(80) not null);
+
+
+-- verificar a estrutura da tabela:
+
+DESCRIBE andrade.clientes;
+
+-- inserindo dados dentro da nossa tabela de clientes 
+INSERT into andrade.clientes (nome_cliente,idade_cliente,email_cliente) 
+VALUES 
+("Ricardo Aledrande",48,"ricardo@gama.com"), 
+("Mariana da silva",24,"mari@ig.com.br"), 
+("Luciana Baldere",48,"lu@gmail.com"),
+("Paulo Alexandre",22,"pa@terra.com.br");
+
+-- visualizando os registros inseridos na  estrutura da nossa tabela
+
+SELECT * from andrade.clientes;
+
+-- visualizar apenas alguns dados da tabela
+
+SELECT nome_cliente, email_cliente from andrade.clientes;
+
+-- consulta pelo id_cliente
+
+SELECT * FROM andrade.clientes WHERE id_clientes=1;
+
+-- consulta pela idade (todos os clientes com mesma idade aparecerão)
+
+SELECT * FROM andrade.clientes WHERE idade_cliente=48;
+
+-- para pesquisar o primeiro nome desse exemplo: 
+
+SELECT * FROM andrade.clientes WHERE nome_cliente LIKE("Ricardo%");
+
+-- para pesquisar o ultimo nome desse exemplo: 
+SELECT * FROM andrade.clientes WHERE nome_cliente LIKE("%Alexandre");
+
+-- pesquiser por letra do alfabeto:
+
+SELECT * from andrade.clientes WHERE nome_cliente LIKE("R%");
