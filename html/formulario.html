@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Gama Academy</title>
+    <!-- criando estilos no form -->
+    <style>
+
+    </style>
+    <!-- criando um biblioteca de funcoes no JS para validar nosso form -->
+    <script>
+        function valida_campos() {
+            var nome = cadastro.nome_cliente.value;
+            var email = cadastro.email_cliente.value;
+            var senha = cadastro.senha_cliente.value;
+            var confirma_senha = cadastro.confirma_senha.value;
+
+            if (nome == "") {
+                alert("prezado cliente, por favor preencha seu nome.");
+                cadastro.nome_cliente.focus();
+                return false;
+            }
+            if (email == "") {
+                alert("Prezado cliente, digite seu email.");
+                cadastro.email_cliente.focus();
+                return false;
+            }
+            if (senha == "") {
+
+                alert("prezado cliente, por favor digite uma senha e a confirme abaixo.")
+                return false;
+            }
+            if (confirma_senha == "") {
+
+                alert("prezado cliente, por favor confirme a senha.")
+                return false;
+            }
+            if (senha != confirma_senha) {
+
+                alert("As senhas nao coincidem. Tente novamente.")
+                return false;
+            }
+
+            alert(`Prezado(a) ${nome}, enviaremos mais dados para o email ${email}`)
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Criando um fomulario para cadastro de informaçoes de usuario -->
+    <form id="cadastro" method="get">
+        <!-- criando uma caixa para guardar todos os campos criados na estrutura do formulario -->
+        <fieldset>
+            <!-- legenda do form -->
+            <legend>
+                Preencha os dados abaixo para se cadastrar na nossa plataforma
+            </legend>
+            <!-- definindo etiquetas e campos do form -->
+            <label>Nome cliente:</label>
+            <input type="text" name="nome_cliente" placeholder="Digite seu nome"><br> <br>
+            <!-- o campo name normalmente é o msm nome do atributo no database -->
+            <!-- use sempre um placeholder para indicar no campo do input o que precisa ser feito -->
+            <!-- o atributo da tag 'required', força o cliente a preencher o campo antes de enviar. Foi retirado pois na aula foi mostrado como fazer o msm processo no JS-->
+
+            <label>Email cliente:</label>
+            <input type="email" name="email_cliente" placeholder="Digite um email valido"><br><br>
+            <label>Senha da conta:</label>
+            <input type="password" name="senha_cliente" placeholder="Digite sua senha"><br><br>
+            <label>Repita a senha:</label>
+            <input type="password" placeholder="digite senha igual a anterior" name="confirma_senha"><br><br>
+
+            <!-- criando um botao pra enviar os campos preenchidos -->
+            <input type="submit" value="Enviar" onclick="valida_campos()">
+
+        </fieldset>
+    </form>
+</body>
+
+</html>

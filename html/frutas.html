@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Matriz</title>
+</head>
+<body>
+    <h3>Mercadinho de hortifruti</h3>
+    <p id="apresenta"></p>
+    <br>
+    <h3>Carros para locação</h3>
+    <p id="apresenta_carros"></p>
+    <!-- vamos criar a logica do processo de Matriz -->
+    <script>
+        // criando uma variavel constante
+        const frutas=["Maçã","Pera","Laranja","Limão","Melão","Morango"];
+        // mostrando o conteudo na tela de uma variavel const
+       // document.getElementById("apresenta").innerHTML=frutas;
+
+        //  mostrando um registro desejado dentro da nossa matriz
+        document.getElementById("apresenta").innerHTML=frutas[1];
+
+        //mostrando como atribuir um valor a uma variavel dentro da matriz de outra forma
+        const carros=[];
+        carros[0]="Gol";
+        carros[1]="HB20";
+        carros[2]="Moby";
+        carros[3]="Fiorino";
+        document.getElementById("apresenta_carros").innerHTML=carros;
+            
+    </script>
+</body>
+</html>

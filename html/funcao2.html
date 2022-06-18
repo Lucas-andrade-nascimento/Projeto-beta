@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando elementos em JS</title>
+    <!-- desenvolvendo funções com js -->
+    <style>	
+        div {
+            display: inline-block;
+            margin: 10px;
+
+        }	
+        #verde{
+        background: green;
+        width:  40px;
+		height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        }      
+        #vermelho{
+        background: red;
+        width:  40px;
+		height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        }        
+        #azul{
+        background: blue;
+        width:  40px;
+		height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        }        
+        #amarelo{
+        background: yellow;
+        width:  40px;
+		height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        }
+        
+        
+        
+
+    </style>
+
+    <script>
+        function processa_nome() {
+            var super_nome = document.getElementById("inserir_nome").value;
+
+            if (super_nome != "") {
+
+                var list_nomes = document.getElementById("lista").innerHTML;
+                var ordem = document.getElementById("ordem").innerHTML
+
+                list_nomes = list_nomes + "<li>" + super_nome + "</li>";
+                ordem = super_nome + " ";
+
+                document.getElementById("lista").innerHTML = list_nomes;
+                document.getElementById("ordem").innerHTML += ordem ;
+
+                document.getElementById("inserir_nome").focus();
+                inserir_nome.value = "";
+
+            }
+
+            else {
+                alert("Prezado cliente, favor digitar um numero:")
+                document.getElementById("inserir_nome").focus();
+            }
+        } 
+        function verde(){
+            var cor= document.getElementById("campo")
+            document.getElementById("campo").innerHTML += "<style>#campo{background-color:green;}</style>";
+        }
+        function vermelho(){
+            var cor= document.getElementById("campo")
+            document.getElementById("campo").innerHTML += "<style>#campo{background-color:red;}</style>";
+        }
+        function amarelo(){
+            var cor= document.getElementById("campo")
+            document.getElementById("campo").innerHTML += "<style>#campo{background-color:yellow;}</style>";
+        }
+        function azul(){
+            var cor= document.getElementById("campo")
+            document.getElementById("campo").innerHTML += "<style>#campo{background-color:blue;}</style>";
+        }             
+    </script>
+</head>
+
+<body>
+    <fieldset id="campo">
+    <h3>Sistema de preenchimento de informações</h3>
+
+    <label>Entre com o nome desejado:</label><br>
+
+    <input type="text" id="inserir_nome">
+
+    <input type="button" onclick="processa_nome()" value="Processar">
+
+    <!-- criando uma lista de nomes -->
+
+    <ul id="lista">
+        <!-- <li>Lucas</li>
+        <li>Flavio</li>
+        <li>Rita</li>
+        <li>Ana</li> -->
+    </ul>
+    <p id="ordem"> </p>
+</fieldset>
+
+    <p>Escola uma cor pra sua pagina:</p>
+
+    <div onclick="verde()" id="verde"></div>
+    <div onclick="amarelo()" id="amarelo"></div>
+    <div onclick="vermelho()" id="vermelho"></div>
+    <div onclick="azul()" id="azul"></div>
+</body>
+
+</html>

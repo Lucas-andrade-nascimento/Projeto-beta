@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de alunos - Gama Academy</title>
+</head>
+
+<body>
+    <h3>Cadastro de Alunos</h3>
+    <label>Entre com a quantidade de registros desejada:</label>
+    <input type="text" id="qntd_registro" placeholder="Somente numeros"><br>
+
+    <label>Insira o Nome:</label>
+    <input type="text" id="nomes" placeholder="Digite o nome"><br>
+
+    <label>Digite a idade:</label>
+    <input type="text" id="idade" placeholder="Somente numeros"><br>
+
+    <input type="submit" value="Registrar" onclick="cadastrar()">
+    <p id="apresenta_registro"></p>
+    <script>
+
+        function cadastrar() {
+
+            var quantidade = document.getElementById("qntd_registro").value;
+            for (let contador = 0; contador < quantidade; contador++) {
+                const nomes = [nome = document.getElementById("nomes").value];
+                const idade = [nome = document.getElementById("idade").value];
+                let registro_nome = "";
+
+                registro_nome += nomes[contador] + " " + idade[contador] + "<br>";
+
+                document.getElementById("apresenta_registro").innerHTML = registro_nome;
+            }
+        }
+    </script>
+</body>
+
+</html>

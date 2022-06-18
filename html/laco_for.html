@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laço de repetição com FOR</title>
+</head>
+<body>
+    <h2>Cadastro de Alunos da Gama Academy</h2>
+    <p id="apresenta_alunos"></p>
+
+    <!-- criando procedimento de repetição em JavaScript -->
+    <script>
+        const nomes=["Luis Henrique","Paulo Alexandre","Alda Aparecida","Paulo Reis","Lazaro Pimentel","Lucaa Andrade","Jheniffer Araujo"];
+        // usando o length para saber quantos registros há na nossa variavel
+        // alert(nomes.length);
+
+        let text ='';
+        for(let contador=0; contador<nomes.length; contador++){
+            text+=nomes[contador]+"<br>";
+        }
+        document.getElementById("apresenta_alunos").innerHTML=text
+    </script>
+</body>
+</html>

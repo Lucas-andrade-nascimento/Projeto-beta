@@ -1,0 +1,40 @@
+estrutura de dados
+
+phpmyadmin
+
+try demo
+
+criar database gama_sobrenome
+criar tabela de produtos
+
+id_produto
+nome_produto
+quantidade_produto
+valor_produto exemplo tipo de dados: decimal(8,2)
+
+inserir 5 produtos na estrutura da nossa tabela
+
+enviar os seguintes codigos fontes em SQL
+DataBase
+Tabela
+Inserção de registro
+
+
+enviar para o email do bontempo
+
+resposta:
+
+CREATE DATABASE gama_andrade;
+USE gama_andrade;
+CREATE TABLE gama_andrade.produtos(
+    id_produto int NOT null AUTO_INCREMENT PRIMARY KEY,
+    nome_produto varchar(70) NOT null,
+    quantidade_produto int NOT null,
+    valor_produto decimal(8,2) NOT null); 
+    
+INSERT into gama_andrade.produtos(nome_produto,quantidade_produto,valor_produto) VALUES
+("Televisao LG 45 polegadas",12,2280.99),
+("Ipphone 13 pro plus",5,8995.99),
+("Notebook dell DL569",3,3998.50),
+("Ar condicionado Midea 10 mil BTU",9,1350.80),
+("Motorla Moto G30",15,1100.00);

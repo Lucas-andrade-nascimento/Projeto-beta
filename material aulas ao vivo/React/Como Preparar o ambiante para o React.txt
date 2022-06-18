@@ -1,0 +1,20 @@
+1º processo para se trabalhar com React
+vamos fazer a montagem do nosso ambiente de desenvolvimento
+consultar no pai googl 2 paginas
+
+react 
+nodejs
+
+apos instalar nossa aplicação deveremos entrar no command atraves do CMD
+
+a- digitar na linha de comando o node -v
+ira mostrar a versao que foi instalada da versao do serviço
+
+b - digitar na linha de comando o npm -v
+ira mostrar a versao do servico executavel
+
+c - digitar a gora  o comando cd para criar a pasta do nosso projeto
+cd mais arrastar o local
+
+d - dentro da pasta do desktop, area de trabalho, digitar comando para criar projeto
+npx create-react-app andradetutorial
